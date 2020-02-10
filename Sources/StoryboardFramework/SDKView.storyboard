@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SDK View-->
+        <scene sceneID="z5H-8n-pBx">
+            <objects>
+                <viewController storyboardIdentifier="SDKViewController" id="cWl-mO-1Ix" customClass="SDKViewController" customModule="StoryboardFramework" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5CU-6r-ejY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Ens-Lf-wcA">
+                                <rect key="frame" x="20" y="160" width="374" height="159.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4ZE-jq-cqf">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="59.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxA-mC-If9">
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIH-8m-qn3">
+                                                <rect key="frame" x="0.0" y="39" width="59" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCT-gf-hxs">
+                                        <rect key="frame" x="0.0" y="109.5" width="374" height="50"/>
+                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3Cl-n2-peV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="okBtnDidTap:" destination="cWl-mO-1Ix" eventType="touchUpInside" id="79N-Df-WKx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ens-Lf-wcA" firstAttribute="top" secondItem="GjU-QG-bWU" secondAttribute="top" constant="20" id="3hb-Vn-NHg"/>
+                            <constraint firstItem="GjU-QG-bWU" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ens-Lf-wcA" secondAttribute="bottom" id="5sy-Eh-nLW"/>
+                            <constraint firstItem="Ens-Lf-wcA" firstAttribute="leading" secondItem="GjU-QG-bWU" secondAttribute="leading" constant="20" id="Fw7-N6-zjK"/>
+                            <constraint firstItem="GjU-QG-bWU" firstAttribute="trailing" secondItem="Ens-Lf-wcA" secondAttribute="trailing" constant="20" id="dRG-R0-7qI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GjU-QG-bWU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SDK View" id="8RU-FU-RuX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iqz-b3-7Ua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718.84057971014499" y="42.857142857142854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fg0-P5-Lry">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1HS-0T-VjB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="sMC-6x-c0Z">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cWl-mO-1Ix" kind="relationship" relationship="rootViewController" id="Yt1-Pu-NZn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahz-md-U5N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191.30434782608697" y="42.857142857142854"/>
+        </scene>
+    </scenes>
+</document>
