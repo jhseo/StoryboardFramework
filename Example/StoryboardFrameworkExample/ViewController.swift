@@ -17,12 +17,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func pushBtnDidTap(_ sender: Any) {
-        let vc = SDKView.shared.make()
+        let vc = SDKViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction func presentBtnDidTap(_ sender: Any) {
-        let vc = SDKView.shared.make()
+        let vc = SDKViewController()
         let nav = UINavigationController(rootViewController: vc)
         nav.navigationBar.prefersLargeTitles = true
         self.present(nav, animated: true, completion: nil)
