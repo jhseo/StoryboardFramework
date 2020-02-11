@@ -7,43 +7,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Open View-->
+        <!--Delegate-->
         <scene sceneID="Wdt-ad-Ww8">
             <objects>
-                <viewController id="SSO-Cr-7Zs" customClass="ViewController" customModule="ios_sdk_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SSO-Cr-7Zs" customClass="ViewController" customModule="StoryboardFrameworkExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8YM-dc-o0o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="94q-hA-pLL">
-                                <rect key="frame" x="20" y="160" width="374" height="110"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="94q-hA-pLL">
+                                <rect key="frame" x="20" y="160" width="374" height="190"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxo-Vf-bPN">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
-                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mt0-hv-xJv">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="110"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxo-Vf-bPN">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="DaA-7S-KdD"/>
+                                                </constraints>
+                                                <state key="normal" title="Push">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pushBtnDidTap:" destination="SSO-Cr-7Zs" eventType="touchUpInside" id="n88-rE-mu8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moh-RS-qtk">
+                                                <rect key="frame" x="0.0" y="60" width="374" height="50"/>
+                                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="dZ0-S1-3Ox"/>
+                                                </constraints>
+                                                <state key="normal" title="Present">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="presentBtnDidTap:" destination="SSO-Cr-7Zs" eventType="touchUpInside" id="fW0-Ct-jQ1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x0Y-zC-UyN">
+                                        <rect key="frame" x="0.0" y="140" width="374" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmL-Pc-V7t" customClass="SDKButton" customModule="StoryboardFramework">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="from Storyboard"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="SSO-Cr-7Zs" id="bNC-af-2gq"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="DaA-7S-KdD"/>
+                                            <constraint firstAttribute="height" constant="50" id="Yro-KZ-Nh2"/>
                                         </constraints>
-                                        <state key="normal" title="Push">
-                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pushBtnDidTap:" destination="SSO-Cr-7Zs" eventType="touchUpInside" id="n88-rE-mu8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moh-RS-qtk">
-                                        <rect key="frame" x="0.0" y="60" width="374" height="50"/>
-                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="dZ0-S1-3Ox"/>
-                                        </constraints>
-                                        <state key="normal" title="Present">
-                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="presentBtnDidTap:" destination="SSO-Cr-7Zs" eventType="touchUpInside" id="fW0-Ct-jQ1"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -57,6 +80,9 @@
                         <viewLayoutGuide key="safeArea" id="k2e-k7-aXG"/>
                     </view>
                     <navigationItem key="navigationItem" title="Open View" id="Hp6-qt-ueU"/>
+                    <connections>
+                        <outlet property="buttonStackView" destination="x0Y-zC-UyN" id="0Yi-3Y-DhD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbB-TF-Poj" sceneMemberID="firstResponder"/>
             </objects>
