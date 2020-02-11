@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		4322CB7B23F150AF00838A98 /* SDKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322CB7823F150AF00838A98 /* SDKViewController.swift */; };
+		4322CBA123F2471C00838A98 /* SDKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322CBA023F2471C00838A98 /* SDKButton.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* StoryboardFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* StoryboardFrameworkTests.swift */; };
 		OBJ_41 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
@@ -48,6 +49,8 @@
 /* Begin PBXFileReference section */
 		4322CB7823F150AF00838A98 /* SDKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKViewController.swift; sourceTree = "<group>"; };
 		4322CB7A23F150AF00838A98 /* SDKView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SDKView.storyboard; sourceTree = "<group>"; };
+		4322CBA023F2471C00838A98 /* SDKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKButton.swift; sourceTree = "<group>"; };
+		43DCB24523F2517900F5BE18 /* SDKButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDKButton.xib; sourceTree = "<group>"; };
 		OBJ_12 /* StoryboardFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardFrameworkTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 			children = (
 				4322CB7A23F150AF00838A98 /* SDKView.storyboard */,
 				4322CB7823F150AF00838A98 /* SDKViewController.swift */,
+				4322CBA023F2471C00838A98 /* SDKButton.swift */,
+				43DCB24523F2517900F5BE18 /* SDKButton.xib */,
 			);
 			name = StoryboardFramework;
 			path = Sources/StoryboardFramework;
@@ -214,6 +219,7 @@
 			buildActionMask = 0;
 			files = (
 				4322CB7B23F150AF00838A98 /* SDKViewController.swift in Sources */,
+				4322CBA123F2471C00838A98 /* SDKButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
